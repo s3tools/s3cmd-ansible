@@ -1,0 +1,12 @@
+- hosts: pkg_mgr_yum
+  tasks:
+    - name: install libselinux-python
+      yum: name=libselinux-python state=present
+      become: yes
+
+    - name: add mdomsch ssh key
+      authorized_key: user=mdomsch key="{{ lookup('file',  '/home/mdomsch/.ssh/authorized_keys') }}"
+
+- hosts: s3cmd
+  roles:
+    - s3cmd
