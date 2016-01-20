@@ -1,0 +1,7 @@
+- hosts: all
+  serial: 1
+  tasks:
+    - shell: ./run-tests.py --bucket-prefix {{ansible_distribution_version}} > ~/s3cmd.log 2>&1 || true chdir=s3cmd/s3cmd
+
+    - name: collect logs
+      fetch: src=~/s3cmd.log dest=logs
