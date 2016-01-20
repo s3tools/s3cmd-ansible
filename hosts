@@ -6,15 +6,18 @@ s3cmd-rhel5
 s3cmd-rhel7
 s3cmd-fedora21
 s3cmd-fedora22
-s3cmd-fedora23
+s3cmd-fedora24
+s3cmd-fedora23 ansible_connection=local
+
 
 [s3cmd]
 vm-rhel67
 vm-rhel7
 vm-rhel7x
 s3cmd-rhel5
-s3cmd-rhel7
-s3cmd-fedora21
+#s3cmd-rhel7
+#3cmd-fedora21
 s3cmd-fedora22
-s3cmd-fedora23
+s3cmd-fedora24
 #s3cmd-ubuntu
+s3cmd-fedora23 ansible_connection=local
